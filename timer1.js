@@ -3,7 +3,7 @@ const parseInput = function() {
   
   return input
     .map(x => Number(x) * 1000)
-    .filter(x => (!isNaN(x) && x >= 0))
+    .filter(x => (!isNaN(x) && x >= 0));
 };
 
 const timer = () => {
@@ -11,7 +11,7 @@ const timer = () => {
   seconds.map(
     sec => setTimeout(() => process.stdout.write("\x07"), sec)
   );
-}
+};
 
 timer();
 
