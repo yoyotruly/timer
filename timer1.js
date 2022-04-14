@@ -1,4 +1,4 @@
-const parseInput = function() {
+const parseInput = () => {
   const input = process.argv.slice(2);
   
   return input
@@ -6,12 +6,14 @@ const parseInput = function() {
     .filter(x => (!isNaN(x) && x >= 0));
 };
 
+
 const timer = () => {
   const seconds = parseInput();
   seconds.map(
     sec => setTimeout(() => process.stdout.write("\x07"), sec)
   );
 };
+
 
 timer();
 
